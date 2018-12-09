@@ -27,7 +27,7 @@ async function sendEmail(id) {
     const mailOptions = {
         from: config.MAIL_FROM,
         to: config.MAIL_TO,
-        subject: `Ping sent on ${id}`,
+        subject: `Ping sent: ${id}`,
         text: 'This email is sent to verify if your MX severs works as expected.',
     };
 
