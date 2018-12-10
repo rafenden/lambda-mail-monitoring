@@ -7,8 +7,14 @@ exports.handler = async (event, context) => {
     try {
         const time = new Date().toISOString();
         const id = `lambda-mail-monitoring-${time}`;
+        
+        // Legen...
         await sendEmail(id);
+        
+        // Wait for it
         await new Promise(resolve => setTimeout(resolve, parseInt(config.WAIT_FOR_MAIL, 10)));
+        
+        // ...dary
         await validateEmail(id);
     }
     catch (e) {
