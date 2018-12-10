@@ -1,5 +1,5 @@
 {
-  "name": "lambda-mail-monitoring",
+  "name": "node-mailwatch",
   "version": "0.1.0",
   "main": "index.js",
   "author": "Rafal Enden",

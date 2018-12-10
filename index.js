@@ -2,11 +2,12 @@ const nodemailer = require('nodemailer');
 const logger = require('./logger');
 const axios = require('axios');
 const config = require('./config');
+const packageJson = require('./package');
 
 exports.handler = async (event, context) => {
     try {
         const time = new Date().toISOString();
-        const id = `lambda-mail-monitoring-${time}`;
+        const id = `${packageJson.name}-${time}`;
         
         // Legen...
         await sendEmail(id);
